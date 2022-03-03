@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import lowCodeCore from '@low-code/core'
 
-createApp(App).mount('#app')
+createApp(App).use(lowCodeCore).mount('#app')

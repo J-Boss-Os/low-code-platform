@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "loadsh": "^0.0.4",
-    "vue": "^3.2.25"
+    "vue": "^3.2.25",
+    "@low-code/core": "./package/@lowCode/core"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.2.0",
