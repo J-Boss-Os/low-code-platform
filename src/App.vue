@@ -1,7 +1,9 @@
+<template>
+  <LCPDesign></LCPDesign>
+</template>
+
 <script setup>
 </script>
-
-<template></template>
 
 <style>
 #app {

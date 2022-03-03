@@ -1,0 +1,32 @@
+.lcp-design {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  .lcp-design-head {
+    height: 48px;
+  }
+  .lcp-design-body {
+    flex: auto;
+    height: 0;
+    display: flex;
+  }
+  .lcp-design-left,
+  .lcp-design-right {
+    background-color: #fff;
+  }
+  .lcp-design-left {
+    width: 160px;
+  }
+  .lcp-design-right {
+    width: 180px;
+  }
+  .lcp-design-center {
+    flex: auto;
+    width: 0;
+    background-color: #eee;
+  }
+}

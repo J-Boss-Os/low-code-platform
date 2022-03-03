@@ -1,6 +1,8 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@low-code/core': ./package/@lowCode/core
+  '@low-code/platform': ./package/@lowCode/platform
   '@vitejs/plugin-vue': ^2.2.0
   loadsh: ^0.0.4
   rollup-plugin-commonjs: ^10.1.0
@@ -10,6 +12,8 @@ specifiers:
   vue: ^3.2.25
 
 dependencies:
+  '@low-code/core': link:package/@lowCode/core
+  '@low-code/platform': link:package/@lowCode/platform
   loadsh: 0.0.4
   vue: 3.2.31
 
