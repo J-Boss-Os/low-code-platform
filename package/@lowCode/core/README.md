@@ -1,0 +1,46 @@
+# low-code-platform/core
+
+低代码开发平台-核心类
+
+- [ ] 核心基类
+  - [ ] control
+  - [ ] layoutControl
+  - [ ] formControl
+- [ ] lcp 全局类
+  - [ ] use 注入
+  - [ ] defineComponent 定义组件
+  - [ ] getComponent 获取组件
+  - [ ] $components 组件集合
+  - [ ] $mxins 基类集
+  - [ ] type 判断类
+    - [ ] type 获取对象类型
+    - [ ] isArray 是数组
+    - [ ] isFunction 是函数
+    - [ ] isObject 是对象
+    - [ ] isNumber 是数字
+    - [ ] isString 是字符串
+    - [ ] isNull 是 Null
+    - [ ] isNaN 是 NaN
+    - [ ] isEmptyArray 是空数组
+    - [ ] isEmptyObject 是空对象
+- [ ] PC 设计器
+  - [] 组件菜单
+  - [] 代理渲染组件
+  - [] 拖拽功能
+  - [] 组件配置
+    - [] text 文字输入框
+    - [] multipleText 多文字输入框
+    - [] switch 开关
+    - [] radio 单选
+    - [] select 下拉选择
+    - [] dialog 弹出框
+  - [] 二次开发
+    - [] 当前页面实例开发
+    - [] 样式开发
+    - [] 模板预览
+  - [] 保存
+  - [] 撤销
+  - [] 浏览
+  - [] 复制组件
+  - [] 粘贴组件
+- [ ] PC 浏览器
