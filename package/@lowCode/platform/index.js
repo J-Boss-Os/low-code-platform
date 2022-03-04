@@ -1,8 +1,8 @@
-import designer from './designer'
+import PC from './pc'
 
 export default {
   version: "0.0.1",
   install(Vue) {
-    Vue.use(designer)
+    Vue.use(PC)
   }
 }

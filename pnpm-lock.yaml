@@ -7,6 +7,7 @@ specifiers:
   loadsh: ^0.0.4
   rollup-plugin-commonjs: ^10.1.0
   rollup-plugin-external-globals: ^0.6.1
+  rollup-plugin-inject: ^3.0.2
   sass: ^1.49.9
   vite: ^2.8.0
   vue: ^3.2.25
@@ -21,6 +22,7 @@ devDependencies:
   '@vitejs/plugin-vue': 2.2.4_vite@2.8.6+vue@3.2.31
   rollup-plugin-commonjs: 10.1.0
   rollup-plugin-external-globals: 0.6.1
+  rollup-plugin-inject: 3.0.2
   sass: 1.49.9
   vite: 2.8.6_sass@1.49.9
 
@@ -543,6 +545,15 @@ packages:
       estree-walker: 2.0.2
       is-reference: 1.2.1
       magic-string: 0.25.9
+    dev: true
+
+  /rollup-plugin-inject/3.0.2:
+    resolution: {integrity: sha512-ptg9PQwzs3orn4jkgXJ74bfs5vYz1NCZlSQMBUA0wKcGp5i5pA1AO3fOUEte8enhGUC+iapTCzEWw2jEFFUO/w==}
+    deprecated: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-inject.
+    dependencies:
+      estree-walker: 0.6.1
+      magic-string: 0.25.9
+      rollup-pluginutils: 2.8.2
     dev: true
 
   /rollup-pluginutils/2.8.2:
