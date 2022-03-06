@@ -10,7 +10,9 @@
   "dependencies": {
     "@low-code/core": "./package/@lowCode/core",
     "@low-code/platform": "./package/@lowCode/platform",
+    "ant-design-vue": "^2.2.8",
     "loadsh": "^0.0.4",
+    "unplugin-vue-components": "^0.17.21",
     "vue": "^3.2.25"
   },
   "devDependencies": {
