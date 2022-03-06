@@ -1,0 +1,26 @@
+{
+  "name": "low-code-platform",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@low-code/core": "./package/@lowCode/core",
+    "@low-code/platform": "./package/@lowCode/platform",
+    "ant-design-vue": "^2.2.8",
+    "loadsh": "^0.0.4",
+    "unplugin-vue-components": "^0.17.21",
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.2.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-external-globals": "^0.6.1",
+    "rollup-plugin-inject": "^3.0.2",
+    "sass": "^1.49.9",
+    "vite": "^2.8.0"
+  }
+}

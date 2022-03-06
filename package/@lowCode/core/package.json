@@ -1,0 +1,17 @@
+{
+  "name": "@low-code/core",
+  "version": "0.0.1",
+  "description": "低代码平台-核心模块",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "unplugin-vue-components": "^0.17.21"
+  },
+  "dependencies": {
+    "ant-design-vue": "^2.2.8"
+  }
+}
