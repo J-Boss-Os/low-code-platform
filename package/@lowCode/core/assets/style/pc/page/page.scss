@@ -1,0 +1,32 @@
+.lcp-page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  .lcp-page-head {
+    height: 54px;
+  }
+  .lcp-page-foot {
+    height: 54px;
+  }
+  .lcp-page-body {
+    flex: auto;
+    height: 0;
+    display: flex;
+    overflow: auto;
+  }
+  .lcp-page-center {
+    flex: auto;
+    width: 0;
+    overflow: auto;
+  }
+  .lcp-page-left {
+    width: 120px;
+  }
+  .lcp-page-right {
+    width: 120px;
+  }
+}

@@ -5,6 +5,7 @@ specifiers:
   '@low-code/platform': ./package/@lowCode/platform
   '@vitejs/plugin-vue': ^2.2.0
   ant-design-vue: ^2.2.8
+  jquery: ^3.6.0
   loadsh: ^0.0.4
   rollup-plugin-commonjs: ^10.1.0
   rollup-plugin-external-globals: ^0.6.1
@@ -18,6 +19,7 @@ dependencies:
   '@low-code/core': link:package/@lowCode/core
   '@low-code/platform': link:package/@lowCode/platform
   ant-design-vue: 2.2.8_vue@3.2.31
+  jquery: 3.6.0
   loadsh: 0.0.4
   unplugin-vue-components: 0.17.21_vite@2.8.6+vue@3.2.31
   vue: 3.2.31
@@ -630,6 +632,10 @@ packages:
     dependencies:
       '@types/estree': 0.0.51
     dev: true
+
+  /jquery/3.6.0:
+    resolution: {integrity: sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==}
+    dev: false
 
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}

@@ -26,8 +26,11 @@
     width: 180px;
   }
   .lcp-design-center {
+    box-sizing: border-box;
     flex: auto;
     width: 0;
+    position: relative;
+    padding: $padding;
     background-color: #eee;
   }
 }

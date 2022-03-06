@@ -1,7 +1,7 @@
-import Flex from './layout/Flex.vue'
+import Page from './page/Page.vue'
 
 const components = {
-  Flex,
+  Page
 }
 
 export default {

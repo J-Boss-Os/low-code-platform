@@ -1,0 +1,8 @@
+// 设计器
+@import "./common/theme.scss";
+@import "./common/mixins.scss";
+@import "./designer/design.scss";
+@import "./designer/designProxy.scss";
+
+// PC
+@import "./pc/page/page.scss";

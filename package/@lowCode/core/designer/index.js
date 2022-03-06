@@ -1,5 +1,5 @@
 import Design from "./Design.vue"
-import DesignProxy from "./DesignProxy"
+import DesignProxy from "./DesignProxy.vue"
 import DesignConfigText from "./DesignConfigText.vue"
 
 const components = {

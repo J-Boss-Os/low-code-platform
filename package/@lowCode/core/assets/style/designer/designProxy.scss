@@ -1,0 +1,40 @@
+.lcp-design-proxy {
+  position: relative;
+  > .lcp-control {
+    outline: 1px dashed rgb(213, 213, 213);
+    outline-offset: -1px;
+  }
+  [slot-name] {
+    outline: 1px dashed rgb(213, 213, 213);
+    outline-offset: -1px;
+    &[focus] {
+      background-color: rgba(102, 184, 255, 0.488);
+    }
+  }
+  &[maskvisible="false"] {
+    .lcp-design-proxy-mask {
+      pointer-events: none;
+    }
+  }
+  .lcp-design-proxy-mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+  .lcp-design-proxy-operate {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    background-color: rgb(255, 193, 24);
+  }
+  .lcp-design-proxy-hander {
+    padding: 0 calc($padding/2);
+    user-select: none;
+    cursor: pointer;
+  }
+}

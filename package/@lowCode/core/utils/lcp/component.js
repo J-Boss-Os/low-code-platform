@@ -1,13 +1,16 @@
+import { isEmptyObject, isObject, isEmptyArray, isArray, isFunction } from "./type"
 // 组件集合
 export const $components = {}
+export const $componentDefaultOpts = {}
 
 // 定义组件
 export function defineComponent(comp) {
   const compTop = comp
   deepMxins(comp, (comp, index) => {
     design(comp, index, compTop)
+    props(comp, index, compTop)
   })
-  $components[comp.name] = compTop
+  $components[comp.name] = comp
   return compTop
 }
 
@@ -20,58 +23,43 @@ function deepMxins(comp, cb, index = 0) {
 }
 
 function design(comp, index, compTop) {
-  if (!compTop.designConfigAll) {
-    compTop.designConfigAll = []
-  }
-  if (!comp.design) comp.design = {}
-  designConfig(comp, compTop.designConfigAll)
-}
-
-function designConfig(comp, designConfigAll) {
-  if (!comp.design.config) comp.design.config = []
-  const { config } = comp.design
-  for (let i = 0; i < config.length; i++) {
-    designConfigToProps(comp, config[i])
-    if (!designConfigAll.length) {
-      designConfigAll.push(config[i])
-    } else {
-      const toConfig = designConfigAll.find((item) => item.name == config[i].name)
-      if (!toConfig) {
-        designConfigAll.push(config[i])
-      } else {
-        designConfigMxins(config[i], toConfig)
+  if (!compTop.design || !compTop.design.configGroup) throw new Error(`【${compTop.name}】组件没有声明 design.configGroup`)
+  if (!compTop.designConfigGroupMap) compTop.designConfigGroupMap = {}
+  if (!isEmptyObject(comp.props)) {
+    for (const key in comp.props) {
+      const prop = comp.props[key];
+      if (prop.configGroup) {
+        if (!compTop.designConfigGroupMap[prop.configGroup]) {
+          compTop.designConfigGroupMap[prop.configGroup] = {}
+        }
+        compTop.designConfigGroupMap[prop.configGroup][key] = prop
       }
     }
   }
 }
 
-function designConfigMxins(config, toConfig) {
-  if (!toConfig.children) toConfig.children = []
-  const { children: toChildren = [] } = toConfig
-  const toChildrenKeys = {}
-  for (let i = 0; i < toChildren.length; i++) {
-    toChildrenKeys[toChildren[i].bindAttr] = i
+function props(comp, index, compTop) {
+  if (!compTop.allProps) compTop.allProps = {}
+  if (!comp.props) return
+  Object.assign(compTop.allProps, comp.props)
+}
+
+export function getComponentDefaultOpts(compName) {
+  if ($componentDefaultOpts[compName]) {
+    return _.cloneDeep($componentDefaultOpts[compName])
   }
-  const { children = [] } = config
-  for (let i = 0; i < children.length; i++) {
-    const { bindAttr } = children[i];
-    const toChildrenIndex = toChildrenKeys[bindAttr]
-    if (toChildrenIndex == undefined) {
-      toChildren.push(children[i])
+  if (!$components[compName]) throw new Error(`找不到【${compName}】组件`)
+  const comp = $components[compName]
+  const compOpts = {
+    compType: comp.name,
+  }
+  for (const key in comp.allProps) {
+    if (isFunction(comp.allProps[key].default)) {
+      compOpts[key] = comp.allProps[key].default()
     } else {
-      toChildren[toChildrenIndex] = children[i]
+      compOpts[key] = comp.allProps[key].default
     }
   }
-}
-
-function designConfigToProps(comp, config) {
-  if (!comp.props) comp.props = []
-  if (!config.children) config.children = []
-  const { children } = config
-  for (let i = 0; i < children.length; i++) {
-    comp.props[children[i].bindAttr] = children[i]
-  }
-}
-
-export function getComponentDefaultProps(compName) {
+  compOpts.caption = comp.name.replace(/^LCP(.*)/, "$1").toLocaleLowerCase()
+  return compOpts
 }

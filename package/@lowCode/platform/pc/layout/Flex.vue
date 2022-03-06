@@ -10,19 +10,11 @@ export default lcp.defineComponent({
   desc: "栅格框",
   mixins: [lcpMixins.Control],
   design: {
-    config: [
+    configGroup: [
       {
         title: "基本信息",
         name: "basic",
-        children: [
-          {
-            bindAttr: "caption",
-            label: "标识",
-            configType: "Text",
-            default: "1",
-            type: String,
-          },
-        ],
+        children: ["caption", "visible"],
       },
     ],
   },
