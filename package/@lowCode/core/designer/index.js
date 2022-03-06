@@ -1,8 +1,10 @@
 import Design from "./Design.vue"
+import DesignProxy from "./DesignProxy"
 import DesignConfigText from "./DesignConfigText.vue"
 
 const components = {
   Design,
+  DesignProxy,
   DesignConfigText
 }
 
